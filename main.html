@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lucky {{lucky_number}}</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    Dobrý den, vaše šťastné číslo je {{lucky_number}}.
+
+    <ul>
+    {% for item in items %}
+        {% if item == "auto" %}
+            <li><b>{{ escape(item) }}</b></li>
+        {% else %}
+            <li>{{ escape(item) }}</li>
+        {% end %}
+    {% end %}
+    </ul>
+  </body>
+</html>
